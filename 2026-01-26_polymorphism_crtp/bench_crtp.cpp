@@ -20,9 +20,9 @@ struct Shape {
 };
 
 struct Square : Shape<Square> {
-    double side;
-    explicit Square(double s) : side(s) {}
-    double area() const { return side * side; }
+    double side_;
+    explicit Square(double s) : side_(s) {}
+    double area() const { return side_ * side_; }
 };
 
 void bmCrtp(benchmark::State& state) {

@@ -13,9 +13,9 @@
 constexpr std::size_t kNumShapes = 10000;
 
 struct Square {
-    double side;
-    explicit Square(double s) : side(s) {}
-    double getArea() const { return side * side; }
+    double side_;
+    explicit Square(double s) : side_(s) {}
+    double getArea() const { return side_ * side_; }
 };
 
 void bmDirect(benchmark::State& state) {

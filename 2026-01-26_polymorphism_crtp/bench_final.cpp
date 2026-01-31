@@ -21,15 +21,15 @@ struct Shape {
 };
 
 struct SquareFinal final : Shape {
-    double side;
-    explicit SquareFinal(double s) : side(s) {}
-    double getArea() const override { return side * side; }
+    double side_;
+    explicit SquareFinal(double s) : side_(s) {}
+    double getArea() const override { return side_ * side_; }
 };
 
 struct TriangleFinal final : Shape {
-    double base, height;
-    TriangleFinal(double b, double h) : base(b), height(h) {}
-    double getArea() const override { return 0.5 * base * height; }
+    double base_, height_;
+    TriangleFinal(double b, double h) : base_(b), height_(h) {}
+    double getArea() const override { return 0.5 * base_ * height_; }
 };
 
 // Final class without pointer indirection

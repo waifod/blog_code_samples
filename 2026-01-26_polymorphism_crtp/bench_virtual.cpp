@@ -19,15 +19,15 @@ struct Shape {
 };
 
 struct Square : Shape {
-    double side;
-    explicit Square(double s) : side(s) {}
-    double getArea() const override { return side * side; }
+    double side_;
+    explicit Square(double s) : side_(s) {}
+    double getArea() const override { return side_ * side_; }
 };
 
 struct Triangle : Shape {
-    double base, height;
-    Triangle(double b, double h) : base(b), height(h) {}
-    double getArea() const override { return 0.5 * base * height; }
+    double base_, height_;
+    Triangle(double b, double h) : base_(b), height_(h) {}
+    double getArea() const override { return 0.5 * base_ * height_; }
 };
 
 // Virtual dispatch without pointer indirection
