@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-class Shape {
+struct Shape {
     struct Concept {
         virtual ~Concept() = default;
         virtual double area() const = 0;
@@ -18,7 +18,6 @@ class Shape {
     
     std::unique_ptr<Concept> object;
 
-public:
     template<typename T>
     Shape(T obj) : object(std::make_unique<Model<T>>(std::move(obj))) {}
     

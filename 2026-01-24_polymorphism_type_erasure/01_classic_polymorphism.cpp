@@ -3,22 +3,19 @@
 #include <vector>
 #include <memory>
 
-class Shape {
-public:
+struct Shape {
     virtual ~Shape() = default;
     virtual double area() const = 0;
 };
 
-class Circle : public Shape {
+struct Circle : Shape {
     double radius_;
-public:
     Circle(double r) : radius_(r) {}
     double area() const override { return M_PI * radius_ * radius_; }
 };
 
-class Square : public Shape {
+struct Square : Shape {
     double side_;
-public:
     Square(double s) : side_(s) {}
     double area() const override { return side_ * side_; }
 };
